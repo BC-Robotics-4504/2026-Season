@@ -1,0 +1,14 @@
+{
+  "recommendations": [
+    "charliermarsh.ruff",
+    "github.vscode-github-actions",
+    "aaron-bond.better-comments",
+    "davidanson.vscode-markdownlint",
+    "github.vscode-pull-request-github",
+    "eamodio.gitlens",
+    "ms-python.python",
+    "vscode-icons-team.vscode-icons",
+    "tamasfe.even-better-toml"
+  ],
+  "unwantedRecommendations": []
+}
