@@ -10,6 +10,7 @@ dependencies = [
     { name = "numpy" },
     { name = "opencv-python" },
     { name = "robotpy", extra = ["all"] },
+    { name = "wpilib" },
 ]
 
 [package.metadata]
@@ -17,6 +18,7 @@ requires-dist = [
     { name = "numpy" },
     { name = "opencv-python" },
     { name = "robotpy", extras = ["all"], specifier = ">=2025.3.2.2" },
+    { name = "wpilib", specifier = ">=2025.3.2.2" },
 ]
 
 [[package]]
