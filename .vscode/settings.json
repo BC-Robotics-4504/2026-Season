@@ -1,13 +1,9 @@
 {
+  "json.schemaDownload.enable": true,
   "editor.formatOnSave": true,
-
-
   "files.eol": "\n",
   "editor.defaultFormatter": "charliermarsh.ruff",
-
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
-
   "workbench.iconTheme": "vscode-icons",
-
 }

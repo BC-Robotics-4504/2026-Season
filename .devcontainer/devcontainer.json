@@ -41,4 +41,5 @@
   "remoteEnv": {
     "PATH": "${containerEnv:PATH}:/home/vscode/.local/bin"
   },
-  "postCreateCommand": "mkdir -p /home/vscode/.config/fish && echo 'set fish_greeting' > /home/vscode/.config/fish/config.fish && echo 'starship init fish | source' >> /home/vscode/.config/fish/config.fish && uv sync"}
+  "postCreateCommand": "mkdir -p /home/vscode/.config/fish && echo 'set fish_greeting' > /home/vscode/.config/fish/config.fish && echo 'starship init fish | source' >> /home/vscode/.config/fish/config.fish && uv sync"
+}
