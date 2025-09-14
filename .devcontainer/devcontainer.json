@@ -13,6 +13,7 @@
     "vscode": {
       "settings": {
         "terminal.integrated.defaultProfile.linux": "fish",
+        "python.terminal.activateEnvironment": true,
         "python.defaultInterpreterPath": "/workspaces/2026-Season/.venv/bin/python",
         "editor.formatOnSave": true,
         "files.eol": "\n",
