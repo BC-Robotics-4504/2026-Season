@@ -8,7 +8,9 @@
     "eamodio.gitlens",
     "ms-python.python",
     "vscode-icons-team.vscode-icons",
-    "tamasfe.even-better-toml"
+    "tamasfe.even-better-toml",
+    "zhuangtongfa.material-theme"
+
   ],
   "unwantedRecommendations": []
 }
