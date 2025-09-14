@@ -6,12 +6,13 @@
     "ghcr.io/jsburckhardt/devcontainer-features/ruff:1": {},
     "ghcr.io/devcontainers/features/git:1": {},
     "ghcr.io/devcontainers/features/github-cli:1": {},
-    "ghcr.io/schlich/devcontainer-features/starship:0": {}
+    "ghcr.io/schlich/devcontainer-features/starship:0": {},
+    "ghcr.io/devcontainers-extra/features/fish-apt-get:1": {}
   },
   "customizations": {
     "vscode": {
       "settings": {
-        "terminal.integrated.defaultProfile.linux": "bash",
+        "terminal.integrated.defaultProfile.linux": "fish",
         "python.defaultInterpreterPath": "/workspaces/2026-Season/.venv/bin/python",
         "editor.formatOnSave": true,
         "files.eol": "\n",
@@ -37,5 +38,4 @@
   "remoteEnv": {
     "PATH": "${containerEnv:PATH}:/home/vscode/.local/bin"
   },
-  "postCreateCommand": "echo 'eval \"$(starship init bash)\"' >> /home/vscode/.bashrc && uv sync"
-}
+  "postCreateCommand": "mkdir -p /home/vscode/.config/fish && echo 'set fish_greeting' > /home/vscode/.config/fish/config.fish && echo 'starship init fish | source' >> /home/vscode/.config/fish/config.fish && uv sync"}
