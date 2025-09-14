@@ -1,20 +1,27 @@
 {
   "name": "Team 4504 Python Dev Container",
-  "image": "mcr.microsoft.com/devcontainers/python:1-3.13-bookworm",
+  "image": "mcr.microsoft.com/devcontainers/python:3.13-trixie",
   "features": {
     "ghcr.io/jsburckhardt/devcontainer-features/uv:1": {},
-    "ghcr.io/jsburckhardt/devcontainer-features/ruff:1": {}
+    "ghcr.io/jsburckhardt/devcontainer-features/ruff:1": {},
+    "ghcr.io/devcontainers/features/git:1": {},
+    "ghcr.io/devcontainers/features/github-cli:1": {},
+    "ghcr.io/schlich/devcontainer-features/starship:0": {},
+    "ghcr.io/devcontainers-extra/features/fish-apt-get:1": {}
   },
-
   "customizations": {
     "vscode": {
       "settings": {
-        "terminal.integrated.defaultProfile.linux": "bash",
+        "terminal.integrated.defaultProfile.linux": "fish",
         "python.defaultInterpreterPath": "/workspaces/2026-Season/.venv/bin/python",
         "editor.formatOnSave": true,
         "files.eol": "\n",
+        "remote.autoForwardPorts": false,
         "files.insertFinalNewline": true,
-        "files.trimTrailingWhitespace": true
+        "files.trimTrailingWhitespace": true,
+        "files.autoSaveDelay": 1000,
+        "files.autoSave": "afterDelay",
+        "workbench.colorTheme": "One Dark Pro Darker"
       },
       "extensions": [
         "github.vscode-github-actions",
@@ -25,15 +32,13 @@
         "ms-python.python",
         "charliermarsh.ruff",
         "vscode-icons-team.vscode-icons",
-        "tamasfe.even-better-toml"
+        "tamasfe.even-better-toml",
+        "zhuangtongfa.material-theme"
       ]
     }
   },
-
   "remoteUser": "vscode",
   "remoteEnv": {
     "PATH": "${containerEnv:PATH}:/home/vscode/.local/bin"
   },
-
-  "postCreateCommand": "uv sync"
-}
+  "postCreateCommand": "mkdir -p /home/vscode/.config/fish && echo 'set fish_greeting' > /home/vscode/.config/fish/config.fish && echo 'starship init fish | source' >> /home/vscode/.config/fish/config.fish && uv sync"}
