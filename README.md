@@ -2,7 +2,7 @@
 # 2026-Season
 
 ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/BC-Robotics-4504/2026-Season/lint.yml?branch=main)
-![License: GPL v2](https://img.shields.io/badge/License-GPL%20v2-blue.svg)
+![License: GPL v2](https://img.shields.io/badge/License-GPL%20v3-blue.svg)
 
 ## Overview
 
