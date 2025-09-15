@@ -12,9 +12,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Ruff lint + format
+      - name: Ruff lint (check)
         uses: astral-sh/ruff-action@v3
         with:
-          args: |
-            check .
-            format --check --diff
+          args: "check ."
+
+      - name: Ruff format (verify only)
+        uses: astral-sh/ruff-action@v3
+        with:
+          args: "format --check --diff"
