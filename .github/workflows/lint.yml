@@ -1,6 +1,5 @@
 name: Lint
 
-
 on:
   push:
     branches: [main]
@@ -11,7 +10,11 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
-      - name: ruff-action
-        uses: astral-sh/ruff-action@v3.5.1
+      - uses: actions/checkout@v4
+
+      - name: Ruff lint + format
+        uses: astral-sh/ruff-action@v3
         with:
-            src: "./"
+          args: |
+            check .
+            format --check --diff
