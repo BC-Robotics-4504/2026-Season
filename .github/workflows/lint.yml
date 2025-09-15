@@ -11,17 +11,5 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.13'
-      - name: Install dependencies with uv
-        run: |
-          pip install uv
-          uv sync
-      - name: Lint with Ruff
-        run: |
-          uv pip install ruff
-          ruff check .
+      - name: ruff-action
+        uses: astral-sh/ruff-action@v3.5.1
